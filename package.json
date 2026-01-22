@@ -1,0 +1,17 @@
+{
+  "name": "notion-clone",
+  "version": "1.0.0",
+  "description": "A Notion clone with block-based editor",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": ["notion", "editor", "blocks"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
