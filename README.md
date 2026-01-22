@@ -1,6 +1,6 @@
-# 📝 Notion Clone
+# 📝 YUGZ
 
-A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Features a block-based editor with rich formatting options, page hierarchy, persistent storage, and a sleek dark mode interface.
+A powerful block-based editor inspired by Notion. Built with React, Node.js, Express, and MongoDB. Features rich text formatting, intelligent search, page management, and a beautiful dark mode interface.
 
 ## ✨ Features
 
@@ -27,15 +27,27 @@ A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Fe
   - 9 background highlights
   - Visual color picker
 
+### Search
+- **Quick Search** (Ctrl/Cmd + K)
+  - Search across all page titles and content
+  - Real-time search results
+  - Keyboard navigation (↑↓ arrows, Enter to open)
+  - Shows content snippets with highlighted matches
+  - Recent pages when no query
+- **Smart Highlighting:**
+  - Query matches highlighted in titles
+  - Context snippets from page content
+  - Relevance-based sorting
+
 ### Editor Capabilities
 - **Keyboard Shortcuts:**
+  - `Ctrl/Cmd + K` - Open search
   - `Enter` - Create new block below
   - `Backspace` on empty block - Delete block
   - `/` - Open block type menu
   - `Ctrl/Cmd + B` - Bold
   - `Ctrl/Cmd + I` - Italic
   - `Ctrl/Cmd + U` - Underline
-  - `Ctrl/Cmd + K` - Add link
 
 - **Block Operations:**
   - Move blocks up/down
@@ -311,8 +323,9 @@ This is a learning project, but contributions are welcome:
 ## 🙏 Acknowledgments
 
 - Inspired by [Notion](https://www.notion.so)
-- Built as a learning project to understand block-based editors
+- Built to demonstrate modern block-based editor architecture
+- Powered by React, Express, and MongoDB
 
 ---
 
-**Enjoy building with your Notion clone!** 🎉
+**Enjoy building with YUGZ!** 🚀

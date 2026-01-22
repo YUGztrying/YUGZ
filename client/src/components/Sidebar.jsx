@@ -1,14 +1,19 @@
-import { FiPlus, FiTrash2 } from 'react-icons/fi'
+import { FiPlus, FiTrash2, FiSearch } from 'react-icons/fi'
 import '../styles/Sidebar.css'
 
-function Sidebar({ pages, currentPage, onSelectPage, onCreatePage, onDeletePage }) {
+function Sidebar({ pages, currentPage, onSelectPage, onCreatePage, onDeletePage, onOpenSearch }) {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <h1>📝 Notion Clone</h1>
-        <button className="new-page-btn" onClick={onCreatePage} title="New Page">
-          <FiPlus />
-        </button>
+        <h1>📝 YUGZ</h1>
+        <div className="sidebar-actions">
+          <button className="search-btn" onClick={onOpenSearch} title="Search (Ctrl+K)">
+            <FiSearch />
+          </button>
+          <button className="new-page-btn" onClick={onCreatePage} title="New Page">
+            <FiPlus />
+          </button>
+        </div>
       </div>
 
       <div className="pages-list">
