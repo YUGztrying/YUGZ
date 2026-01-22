@@ -13,6 +13,29 @@ A powerful block-based editor inspired by Notion. Built with React, Node.js, Exp
   - ☐ To-do Lists with checkboxes
   - `</> Code blocks
   - " Quotes
+  - — Dividers
+
+### Media Blocks
+- **Images** 🖼️
+  - Upload images (drag & drop or click)
+  - Paste images from clipboard
+  - Add images via URL
+  - Resize images with drag handles
+  - Add captions
+  - Supports: JPG, PNG, GIF, WebP
+- **Videos** 🎥
+  - Embed YouTube videos
+  - Embed Vimeo videos
+  - Embed Loom videos
+  - Auto-parsing of video URLs
+  - Add captions
+  - Responsive 16:9 player
+- **Files** 📎
+  - Upload any file type (max 10MB)
+  - Drag & drop support
+  - Download uploaded files
+  - File name and size display
+  - PDF, documents, and more
 
 ### Rich Text Formatting
 - **Text Styles:**

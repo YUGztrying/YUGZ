@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { FiMoreVertical, FiTrash2, FiChevronUp, FiChevronDown } from 'react-icons/fi'
 import FormattingToolbar from './FormattingToolbar'
+import ImageBlock from './ImageBlock'
+import VideoBlock from './VideoBlock'
+import FileBlock from './FileBlock'
 import '../styles/Block.css'
 
 function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, isFirst, isLast }) {
@@ -20,7 +23,11 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
     { type: 'numberList', label: 'Numbered List', icon: '1.' },
     { type: 'todo', label: 'To-do', icon: '☐' },
     { type: 'code', label: 'Code', icon: '</>' },
-    { type: 'quote', label: 'Quote', icon: '"' }
+    { type: 'quote', label: 'Quote', icon: '"' },
+    { type: 'divider', label: 'Divider', icon: '—' },
+    { type: 'image', label: 'Image', icon: '🖼️' },
+    { type: 'video', label: 'Video', icon: '🎥' },
+    { type: 'file', label: 'File', icon: '📎' }
   ]
 
   useEffect(() => {
@@ -147,6 +154,24 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
   }
 
   const renderInput = () => {
+    // Media blocks use custom components
+    if (block.type === 'image') {
+      return <ImageBlock block={block} onUpdate={onUpdate} />
+    }
+
+    if (block.type === 'video') {
+      return <VideoBlock block={block} onUpdate={onUpdate} />
+    }
+
+    if (block.type === 'file') {
+      return <FileBlock block={block} onUpdate={onUpdate} />
+    }
+
+    // Divider block
+    if (block.type === 'divider') {
+      return <div className="divider-block" />
+    }
+
     // Code blocks use plain textarea (no rich text)
     if (block.type === 'code') {
       return (
