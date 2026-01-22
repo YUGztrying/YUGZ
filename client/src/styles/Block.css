@@ -45,10 +45,10 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   min-width: 150px;
   z-index: 10;
   overflow: hidden;
@@ -58,7 +58,7 @@
   width: 100%;
   padding: 8px 12px;
   border: none;
-  background: white;
+  background: var(--bg-secondary);
   cursor: pointer;
   text-align: left;
   font-size: 14px;
@@ -158,10 +158,10 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   min-width: 250px;
   z-index: 20;
   margin-top: 4px;
@@ -173,7 +173,7 @@
   width: 100%;
   padding: 8px 12px;
   border: none;
-  background: white;
+  background: var(--bg-secondary);
   cursor: pointer;
   text-align: left;
   font-size: 14px;

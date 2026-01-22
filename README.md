@@ -1,6 +1,6 @@
 # 📝 Notion Clone
 
-A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Features a block-based editor with rich formatting options, page hierarchy, and persistent storage.
+A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Features a block-based editor with rich formatting options, page hierarchy, persistent storage, and a sleek dark mode interface.
 
 ## ✨ Features
 
@@ -38,6 +38,12 @@ A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Fe
   - localStorage (works offline, no setup)
   - MongoDB backend (persistent, scalable)
 - Automatic fallback to localStorage if backend unavailable
+
+### UI/UX
+- **Dark Mode** - Beautiful dark theme inspired by Notion
+- Clean, minimal interface
+- Smooth transitions and animations
+- Responsive design
 
 ## 🚀 Quick Start
 
@@ -204,15 +210,17 @@ All styles are in `client/src/styles/`:
 - `Editor.css` - Editor layout
 - `Block.css` - Block components
 
-### CSS Variables
-Edit `client/src/styles/index.css`:
+### CSS Variables (Dark Mode)
+The app uses a beautiful dark theme. Edit `client/src/styles/index.css` to customize colors:
 ```css
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f7f6f3;
-  --text-primary: #37352f;
-  --accent-color: #2383e2;
-  /* ... more variables */
+  --bg-primary: #191919;      /* Main background */
+  --bg-secondary: #252525;    /* Sidebar & code blocks */
+  --bg-hover: #2f2f2f;        /* Hover states */
+  --text-primary: #ffffff;    /* Primary text */
+  --text-secondary: #9b9b9b;  /* Secondary text */
+  --border-color: #373737;    /* Borders */
+  --accent-color: #4a9eff;    /* Links & accents */
 }
 ```
 
@@ -236,17 +244,38 @@ npm run install-all
 
 ## 🚀 Deployment
 
-### Frontend (Vercel/Netlify)
+### Deploy to Vercel (Recommended)
+
+This project is optimized for Vercel deployment. Follow these steps:
+
+1. **Push your code to GitHub** (if not already done)
+   ```bash
+   git push origin your-branch
+   ```
+
+2. **Deploy to Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect the configuration from `vercel.json`
+   - Click "Deploy"
+
+3. **That's it!** Your app will be live in seconds.
+
+The app uses localStorage by default, so no database setup is needed for deployment. Your data persists in the browser.
+
+### Alternative: Deploy Frontend to Netlify
 ```bash
 cd client
 npm run build
-# Deploy the 'dist' folder
+# Deploy the 'dist' folder to Netlify
 ```
 
-### Backend (Heroku/Railway)
+### Optional: Deploy Backend (Heroku/Railway)
+If you want to add MongoDB backend:
 ```bash
 cd server
-# Set environment variables
+# Set environment variables (MONGODB_URI)
 # Deploy with Node.js buildpack
 ```
 

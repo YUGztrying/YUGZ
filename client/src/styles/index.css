@@ -5,13 +5,14 @@
 }
 
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f7f6f3;
-  --bg-hover: #eeeeee;
-  --text-primary: #37352f;
-  --text-secondary: #787774;
-  --border-color: #e9e9e7;
-  --accent-color: #2383e2;
+  /* Dark Mode Colors - Notion Style */
+  --bg-primary: #191919;
+  --bg-secondary: #252525;
+  --bg-hover: #2f2f2f;
+  --text-primary: #ffffff;
+  --text-secondary: #9b9b9b;
+  --border-color: #373737;
+  --accent-color: #4a9eff;
   --sidebar-width: 260px;
 }
 
