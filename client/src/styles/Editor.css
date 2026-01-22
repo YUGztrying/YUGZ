@@ -1,0 +1,48 @@
+.editor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 96px;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-input {
+  font-size: 48px;
+  border: none;
+  background: transparent;
+  width: 60px;
+  text-align: center;
+  outline: none;
+}
+
+.icon-input:hover {
+  background: var(--bg-hover);
+  border-radius: 4px;
+}
+
+.title-input {
+  flex: 1;
+  font-size: 40px;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.title-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.blocks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
