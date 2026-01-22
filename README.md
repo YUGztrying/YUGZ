@@ -14,17 +14,34 @@ A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Fe
   - `</> Code blocks
   - " Quotes
 
+### Rich Text Formatting
+- **Text Styles:**
+  - **Bold** (Ctrl/Cmd + B)
+  - *Italic* (Ctrl/Cmd + I)
+  - Underline (Ctrl/Cmd + U)
+  - ~~Strikethrough~~
+  - `Inline Code`
+  - [Links](https://example.com) (Ctrl/Cmd + K)
+- **Colors & Highlights:**
+  - 9 text colors
+  - 9 background highlights
+  - Visual color picker
+
 ### Editor Capabilities
 - **Keyboard Shortcuts:**
   - `Enter` - Create new block below
   - `Backspace` on empty block - Delete block
   - `/` - Open block type menu
+  - `Ctrl/Cmd + B` - Bold
+  - `Ctrl/Cmd + I` - Italic
+  - `Ctrl/Cmd + U` - Underline
+  - `Ctrl/Cmd + K` - Add link
 
 - **Block Operations:**
-  - Drag and reorder blocks
+  - Move blocks up/down
   - Delete blocks via menu
   - Change block type on-the-fly
-  - Move blocks up/down
+  - Select text to show formatting toolbar
 
 ### Page Management
 - Create unlimited pages
