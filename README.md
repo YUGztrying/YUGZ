@@ -1,6 +1,6 @@
-# 📝 Notion Clone
+# 📝 YUGZ
 
-A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Features a block-based editor with rich formatting options, page hierarchy, persistent storage, and a sleek dark mode interface.
+A powerful block-based editor inspired by Notion. Built with React, Node.js, Express, and MongoDB. Features rich text formatting, intelligent search, page management, and a beautiful dark mode interface.
 
 ## ✨ Features
 
@@ -13,18 +13,70 @@ A full-featured Notion clone built with React, Node.js, Express, and MongoDB. Fe
   - ☐ To-do Lists with checkboxes
   - `</> Code blocks
   - " Quotes
+  - — Dividers
+
+### Media Blocks
+- **Images** 🖼️
+  - Upload images (drag & drop or click)
+  - Paste images from clipboard
+  - Add images via URL
+  - Resize images with drag handles
+  - Add captions
+  - Supports: JPG, PNG, GIF, WebP
+- **Videos** 🎥
+  - Embed YouTube videos
+  - Embed Vimeo videos
+  - Embed Loom videos
+  - Auto-parsing of video URLs
+  - Add captions
+  - Responsive 16:9 player
+- **Files** 📎
+  - Upload any file type (max 10MB)
+  - Drag & drop support
+  - Download uploaded files
+  - File name and size display
+  - PDF, documents, and more
+
+### Rich Text Formatting
+- **Text Styles:**
+  - **Bold** (Ctrl/Cmd + B)
+  - *Italic* (Ctrl/Cmd + I)
+  - Underline (Ctrl/Cmd + U)
+  - ~~Strikethrough~~
+  - `Inline Code`
+  - [Links](https://example.com) (Ctrl/Cmd + K)
+- **Colors & Highlights:**
+  - 9 text colors
+  - 9 background highlights
+  - Visual color picker
+
+### Search
+- **Quick Search** (Ctrl/Cmd + K)
+  - Search across all page titles and content
+  - Real-time search results
+  - Keyboard navigation (↑↓ arrows, Enter to open)
+  - Shows content snippets with highlighted matches
+  - Recent pages when no query
+- **Smart Highlighting:**
+  - Query matches highlighted in titles
+  - Context snippets from page content
+  - Relevance-based sorting
 
 ### Editor Capabilities
 - **Keyboard Shortcuts:**
+  - `Ctrl/Cmd + K` - Open search
   - `Enter` - Create new block below
   - `Backspace` on empty block - Delete block
   - `/` - Open block type menu
+  - `Ctrl/Cmd + B` - Bold
+  - `Ctrl/Cmd + I` - Italic
+  - `Ctrl/Cmd + U` - Underline
 
 - **Block Operations:**
-  - Drag and reorder blocks
+  - Move blocks up/down
   - Delete blocks via menu
   - Change block type on-the-fly
-  - Move blocks up/down
+  - Select text to show formatting toolbar
 
 ### Page Management
 - Create unlimited pages
@@ -294,8 +346,9 @@ This is a learning project, but contributions are welcome:
 ## 🙏 Acknowledgments
 
 - Inspired by [Notion](https://www.notion.so)
-- Built as a learning project to understand block-based editors
+- Built to demonstrate modern block-based editor architecture
+- Powered by React, Express, and MongoDB
 
 ---
 
-**Enjoy building with your Notion clone!** 🎉
+**Enjoy building with YUGZ!** 🚀

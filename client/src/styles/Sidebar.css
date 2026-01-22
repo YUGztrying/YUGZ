@@ -23,7 +23,14 @@
   gap: 6px;
 }
 
-.new-page-btn {
+.sidebar-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.new-page-btn,
+.search-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -36,7 +43,8 @@
   transition: background 0.15s;
 }
 
-.new-page-btn:hover {
+.new-page-btn:hover,
+.search-btn:hover {
   background: var(--bg-hover);
 }
 
