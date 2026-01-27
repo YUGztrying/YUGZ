@@ -100,6 +100,7 @@ function Editor({ page, onSave }) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Untitled"
+          dir="ltr"
         />
       </div>
 

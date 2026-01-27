@@ -114,6 +114,7 @@
   width: 100%;
   resize: none;
   direction: ltr;
+  unicode-bidi: bidi-override;
   text-align: left;
 }
 
