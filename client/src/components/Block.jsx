@@ -177,6 +177,7 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
       return (
         <textarea
           ref={inputRef}
+          dir="ltr"
           value={block.content}
           onChange={handleContentChange}
           onKeyDown={handleKeyDown}
@@ -194,6 +195,7 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
       <div
         ref={contentEditableRef}
         contentEditable
+        dir="ltr"
         suppressContentEditableWarning
         onInput={handleContentEditableChange}
         onKeyDown={handleKeyDown}
