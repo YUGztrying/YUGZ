@@ -113,6 +113,8 @@
   padding: 3px 2px;
   width: 100%;
   resize: none;
+  direction: ltr;
+  text-align: left;
 }
 
 .block-input::placeholder {

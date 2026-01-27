@@ -23,6 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background: var(--bg-primary);
+  direction: ltr;
 }
 
 #root {
