@@ -114,9 +114,9 @@
   width: 100%;
   resize: none;
   direction: ltr !important;
-  unicode-bidi: bidi-override !important;
+  
   text-align: left !important;
-  writing-mode: horizontal-tb !important;
+  
 }
 
 .block-input::placeholder {
@@ -133,16 +133,16 @@
 /* Force LTR for all contentEditable elements */
 .block-input[contenteditable] {
   direction: ltr !important;
-  unicode-bidi: bidi-override !important;
+  
   text-align: left !important;
-  writing-mode: horizontal-tb !important;
+  
 }
 
 /* Prevent RTL on all textarea and input elements in blocks */
 .block-input.code,
 textarea.block-input {
   direction: ltr !important;
-  unicode-bidi: bidi-override !important;
+  
   text-align: left !important;
 }
 
