@@ -112,6 +112,8 @@ function InstagramPostBlock({ block, onUpdate }) {
             placeholder="Write your caption here..."
             className="ig-caption-input"
             rows="4"
+            dir="ltr"
+            style={{ direction: 'ltr', textAlign: 'left' }}
           />
           <div className="ig-caption-count">
             {(block.properties?.caption || '').length} characters
@@ -127,6 +129,8 @@ function InstagramPostBlock({ block, onUpdate }) {
             onChange={handleHashtagsChange}
             placeholder="#ai #automation #tech"
             className="ig-hashtags-input"
+            dir="ltr"
+            style={{ direction: 'ltr', textAlign: 'left' }}
           />
         </div>
 

@@ -226,9 +226,7 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
         dir="ltr"
         lang="en"
         style={{ 
-          direction: 'ltr', 
-          unicodeBidi: 'bidi-override',
-          writingMode: 'horizontal-tb',
+          direction: 'ltr',
           textAlign: 'left'
         }}
       />
