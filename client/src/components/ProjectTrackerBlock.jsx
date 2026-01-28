@@ -58,6 +58,12 @@ function ProjectTrackerBlock({ block, onUpdate }) {
           onChange={handleProjectNameChange}
           placeholder="Project Name"
           className="project-name-input"
+          dir="ltr"
+          lang="en"
+          style={{
+            direction: 'ltr',
+            textAlign: 'left'
+          }}
         />
       </div>
 
@@ -92,6 +98,12 @@ function ProjectTrackerBlock({ block, onUpdate }) {
             onChange={handleNextActionChange}
             placeholder="What's the immediate next step?"
             className="project-input"
+            dir="ltr"
+            lang="en"
+            style={{
+              direction: 'ltr',
+              textAlign: 'left'
+            }}
           />
         </div>
 
@@ -104,6 +116,12 @@ function ProjectTrackerBlock({ block, onUpdate }) {
             placeholder="Additional context, blockers, updates..."
             className="project-notes"
             rows="3"
+            dir="ltr"
+            lang="en"
+            style={{
+              direction: 'ltr',
+              textAlign: 'left'
+            }}
           />
         </div>
 

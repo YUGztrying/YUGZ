@@ -38,12 +38,14 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
     if (block.content === '' && inputRef.current) {
       inputRef.current.focus()
       inputRef.current.dir = 'ltr'
+      inputRef.current.style.direction = 'ltr'
+      inputRef.current.style.textAlign = 'left'
     }
     if (block.content === '' && contentEditableRef.current) {
       contentEditableRef.current.focus()
       contentEditableRef.current.dir = 'ltr'
       contentEditableRef.current.style.direction = 'ltr'
-      contentEditableRef.current.style.unicodeBidi = 'bidi-override'
+      contentEditableRef.current.style.textAlign = 'left'
     }
   }, [])
 
@@ -134,9 +136,10 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
   const handleContentEditableChange = () => {
     if (!contentEditableRef.current) return
 
-    // Force LTR direction
+    // Force LTR direction on every change
     contentEditableRef.current.dir = 'ltr'
     contentEditableRef.current.style.direction = 'ltr'
+    contentEditableRef.current.style.textAlign = 'left'
 
     const html = contentEditableRef.current.innerHTML
     onUpdate(block.id, { content: html })
@@ -205,7 +208,11 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
           className="block-input code"
           rows="3"
           dir="ltr"
-          style={{ direction: 'ltr' }}
+          lang="en"
+          style={{ 
+            direction: 'ltr', 
+            textAlign: 'left'
+          }}
         />
       )
     }
@@ -227,8 +234,6 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
         lang="en"
         style={{ 
           direction: 'ltr', 
-          unicodeBidi: 'bidi-override',
-          writingMode: 'horizontal-tb',
           textAlign: 'left'
         }}
       />

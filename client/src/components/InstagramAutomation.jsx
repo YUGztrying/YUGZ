@@ -128,12 +128,22 @@ function InstagramAutomation({ block, onUpdate }) {
               onChange={(e) => setScheduledDate(e.target.value)}
               className="schedule-input"
               min={new Date().toISOString().split('T')[0]}
+              dir="ltr"
+              style={{
+                direction: 'ltr',
+                textAlign: 'left'
+              }}
             />
             <input
               type="time"
               value={scheduledTime}
               onChange={(e) => setScheduledTime(e.target.value)}
               className="schedule-input"
+              dir="ltr"
+              style={{
+                direction: 'ltr',
+                textAlign: 'left'
+              }}
             />
           </div>
           <button 

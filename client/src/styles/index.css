@@ -35,17 +35,27 @@ body {
   height: 100vh;
 }
 
-/* Force LTR (left-to-right) text direction */
+/* Force LTR (left-to-right) text direction globally */
 .block-input,
 .title-input,
 .icon-input,
 .ig-caption-input,
 .ig-hashtags-input,
+.ig-url-field,
 .project-name-input,
 .project-input,
 .project-notes,
 textarea,
-input[type="text"] {
+input[type="text"],
+input,
+[contenteditable],
+[contenteditable="true"] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Additional specificity for contentEditable elements */
+*[contenteditable] {
   direction: ltr !important;
   text-align: left !important;
 }

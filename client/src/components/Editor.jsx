@@ -93,6 +93,11 @@ function Editor({ page, onSave }) {
           onChange={(e) => setIcon(e.target.value)}
           placeholder="📄"
           maxLength={2}
+          dir="ltr"
+          style={{
+            direction: 'ltr',
+            textAlign: 'center'
+          }}
         />
         <input
           type="text"
@@ -100,6 +105,12 @@ function Editor({ page, onSave }) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Untitled"
+          dir="ltr"
+          lang="en"
+          style={{
+            direction: 'ltr',
+            textAlign: 'left'
+          }}
         />
       </div>
 

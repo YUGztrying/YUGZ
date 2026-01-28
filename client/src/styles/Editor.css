@@ -19,6 +19,7 @@
   width: 60px;
   text-align: center;
   outline: none;
+  direction: ltr !important;
 }
 
 .icon-input:hover {
@@ -35,8 +36,9 @@
   outline: none;
   color: var(--text-primary);
   line-height: 1.2;
-  direction: ltr;
-  text-align: left;
+  direction: ltr !important;
+  text-align: left !important;
+  writing-mode: horizontal-tb !important;
 }
 
 .title-input::placeholder {

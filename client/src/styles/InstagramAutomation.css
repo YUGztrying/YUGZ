@@ -141,6 +141,8 @@
   color: var(--text-primary);
   font-size: 13px;
   font-family: inherit;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .schedule-input:focus {

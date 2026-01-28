@@ -114,7 +114,6 @@
   width: 100%;
   resize: none;
   direction: ltr !important;
-  unicode-bidi: embed !important;
   text-align: left !important;
 }
 
@@ -127,6 +126,19 @@
   content: attr(data-placeholder);
   color: var(--text-secondary);
   pointer-events: none;
+}
+
+/* Force LTR for all contentEditable elements */
+.block-input[contenteditable] {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Prevent RTL on all textarea and input elements in blocks */
+.block-input.code,
+textarea.block-input {
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 /* Rich text formatting styles */

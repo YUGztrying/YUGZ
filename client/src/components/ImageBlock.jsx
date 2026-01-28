@@ -160,6 +160,12 @@ function ImageBlock({ block, onUpdate }) {
                 onKeyDown={(e) => e.key === 'Enter' && handleUrlSubmit()}
                 placeholder="Paste image URL..."
                 className="url-input"
+                dir="ltr"
+                lang="en"
+                style={{
+                  direction: 'ltr',
+                  textAlign: 'left'
+                }}
               />
               <button onClick={handleUrlSubmit} className="url-submit-btn">
                 <FiLink />
@@ -211,6 +217,12 @@ function ImageBlock({ block, onUpdate }) {
           onChange={handleCaptionChange}
           placeholder="Add a caption..."
           className="media-caption"
+          dir="ltr"
+          lang="en"
+          style={{
+            direction: 'ltr',
+            textAlign: 'left'
+          }}
         />
       </div>
     </div>

@@ -107,6 +107,12 @@ function SearchModal({ isOpen, onClose, pages, onSelectPage }) {
             onKeyDown={handleKeyDown}
             placeholder="Search pages..."
             className="search-input"
+            dir="ltr"
+            lang="en"
+            style={{
+              direction: 'ltr',
+              textAlign: 'left'
+            }}
           />
           <kbd className="search-hint">ESC</kbd>
         </div>

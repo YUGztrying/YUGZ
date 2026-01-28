@@ -57,6 +57,8 @@
   font-size: 16px;
   color: var(--text-primary);
   font-family: inherit;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .search-input::placeholder {

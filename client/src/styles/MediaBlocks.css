@@ -87,6 +87,8 @@
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .url-input:focus {
@@ -323,6 +325,7 @@
   color: var(--text-secondary);
   text-align: center;
   font-style: italic;
+  direction: ltr !important;
 }
 
 .media-caption:focus {

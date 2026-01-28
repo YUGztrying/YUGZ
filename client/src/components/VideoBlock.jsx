@@ -95,6 +95,12 @@ function VideoBlock({ block, onUpdate }) {
               placeholder="Paste video URL..."
               className="url-input"
               autoFocus
+              dir="ltr"
+              lang="en"
+              style={{
+                direction: 'ltr',
+                textAlign: 'left'
+              }}
             />
             <button onClick={handleUrlSubmit} className="url-submit-btn">
               Embed
@@ -138,6 +144,12 @@ function VideoBlock({ block, onUpdate }) {
           onChange={handleCaptionChange}
           placeholder="Add a caption..."
           className="media-caption"
+          dir="ltr"
+          lang="en"
+          style={{
+            direction: 'ltr',
+            textAlign: 'left'
+          }}
         />
       </div>
     </div>

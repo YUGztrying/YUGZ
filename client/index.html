@@ -12,11 +12,20 @@
       /* Force LTR globally with highest priority */
       *, *::before, *::after {
         direction: ltr !important;
-        unicode-bidi: normal !important;
       }
-      [contenteditable] {
-        -webkit-writing-mode: horizontal-tb !important;
-        writing-mode: horizontal-tb !important;
+      
+      html, body {
+        direction: ltr !important;
+      }
+      
+      input, textarea, [contenteditable], [contenteditable="true"] {
+        direction: ltr !important;
+        text-align: left !important;
+      }
+      
+      /* Override any browser defaults for input direction */
+      input:not([type="radio"]):not([type="checkbox"]) {
+        text-align: left !important;
       }
     </style>
   </head>

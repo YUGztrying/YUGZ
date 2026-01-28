@@ -104,6 +104,8 @@
   border-radius: 4px;
   color: var(--text-primary);
   font-size: 14px;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .ig-image-preview {
@@ -164,6 +166,8 @@
   font-family: inherit;
   resize: vertical;
   transition: border-color 0.2s;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .ig-caption-input:focus {
@@ -194,6 +198,8 @@
   font-size: 14px;
   font-family: monospace;
   transition: border-color 0.2s;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .ig-hashtags-input:focus {
@@ -256,6 +262,8 @@
   font-size: 18px;
   font-weight: 600;
   outline: none;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .project-name-input::placeholder {
@@ -329,6 +337,8 @@
   color: var(--text-primary);
   font-size: 14px;
   transition: border-color 0.2s;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .project-input:focus {
@@ -347,6 +357,8 @@
   font-family: inherit;
   resize: vertical;
   transition: border-color 0.2s;
+  direction: ltr !important;
+  text-align: left !important;
 }
 
 .project-notes:focus {
