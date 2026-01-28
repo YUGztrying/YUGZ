@@ -9,23 +9,18 @@
     <meta name="description" content="YUGZ - A powerful block-based editor with rich text formatting" />
     <title>YUGZ - Block Editor</title>
     <style>
-      /* Force LTR globally with highest priority */
+      /* Force LTR globally */
       *, *::before, *::after {
         direction: ltr !important;
-        unicode-bidi: bidi-override !important;
       }
       
       html, body {
         direction: ltr !important;
-        unicode-bidi: bidi-override !important;
       }
       
       input, textarea, [contenteditable], [contenteditable="true"] {
         direction: ltr !important;
-        unicode-bidi: bidi-override !important;
         text-align: left !important;
-        -webkit-writing-mode: horizontal-tb !important;
-        writing-mode: horizontal-tb !important;
       }
       
       /* Override any browser defaults for input direction */
