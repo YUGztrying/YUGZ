@@ -51,16 +51,11 @@ input,
 [contenteditable],
 [contenteditable="true"] {
   direction: ltr !important;
-  unicode-bidi: bidi-override !important;
   text-align: left !important;
-  writing-mode: horizontal-tb !important;
 }
 
 /* Additional specificity for contentEditable elements */
 *[contenteditable] {
-  -webkit-writing-mode: horizontal-tb !important;
-  writing-mode: horizontal-tb !important;
   direction: ltr !important;
-  unicode-bidi: bidi-override !important;
   text-align: left !important;
 }
