@@ -1,14 +1,21 @@
-import { FiPlus, FiTrash2, FiSearch } from 'react-icons/fi'
+import { FiPlus, FiTrash2, FiSearch, FiBarChart } from 'react-icons/fi'
 import '../styles/Sidebar.css'
 
-function Sidebar({ pages, currentPage, onSelectPage, onCreatePage, onDeletePage, onOpenSearch }) {
+function Sidebar({ pages, currentPage, onSelectPage, onCreatePage, onDeletePage, onOpenSearch, onShowAnalytics, isOpen, onClose }) {
   return (
-    <div className="sidebar">
+    <>
+      {/* Mobile overlay */}
+      {isOpen && <div className="sidebar-overlay" onClick={onClose} />}
+      
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <h1>📝 YUGZ</h1>
         <div className="sidebar-actions">
           <button className="search-btn" onClick={onOpenSearch} title="Search (Ctrl+K)">
             <FiSearch />
+          </button>
+          <button className="analytics-btn" onClick={onShowAnalytics} title="Analytics (Ctrl+A)">
+            <FiBarChart />
           </button>
           <button className="new-page-btn" onClick={onCreatePage} title="New Page">
             <FiPlus />
@@ -40,7 +47,23 @@ function Sidebar({ pages, currentPage, onSelectPage, onCreatePage, onDeletePage,
           </div>
         ))}
       </div>
+
+      <div className="sidebar-footer">
+        <button
+          className="reset-btn"
+          onClick={() => {
+            if (confirm('Reset workspace to templates? This will delete all current pages.')) {
+              localStorage.removeItem('yugz-pages')
+              window.location.reload()
+            }
+          }}
+          title="Reset to Templates"
+        >
+          🔄 Reset Workspace
+        </button>
+      </div>
     </div>
+    </>
   )
 }
 

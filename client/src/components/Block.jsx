@@ -4,6 +4,8 @@ import FormattingToolbar from './FormattingToolbar'
 import ImageBlock from './ImageBlock'
 import VideoBlock from './VideoBlock'
 import FileBlock from './FileBlock'
+import InstagramPostBlock from './InstagramPostBlock'
+import ProjectTrackerBlock from './ProjectTrackerBlock'
 import '../styles/Block.css'
 
 function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, isFirst, isLast }) {
@@ -27,15 +29,21 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
     { type: 'divider', label: 'Divider', icon: '—' },
     { type: 'image', label: 'Image', icon: '🖼️' },
     { type: 'video', label: 'Video', icon: '🎥' },
-    { type: 'file', label: 'File', icon: '📎' }
+    { type: 'file', label: 'File', icon: '📎' },
+    { type: 'instagram', label: 'Instagram Post', icon: '📱' },
+    { type: 'project', label: 'Project Tracker', icon: '🎯' }
   ]
 
   useEffect(() => {
     if (block.content === '' && inputRef.current) {
       inputRef.current.focus()
+      inputRef.current.dir = 'ltr'
     }
     if (block.content === '' && contentEditableRef.current) {
       contentEditableRef.current.focus()
+      contentEditableRef.current.dir = 'ltr'
+      contentEditableRef.current.style.direction = 'ltr'
+      contentEditableRef.current.style.unicodeBidi = 'bidi-override'
     }
   }, [])
 
@@ -126,6 +134,10 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
   const handleContentEditableChange = () => {
     if (!contentEditableRef.current) return
 
+    // Force LTR direction
+    contentEditableRef.current.dir = 'ltr'
+    contentEditableRef.current.style.direction = 'ltr'
+
     const html = contentEditableRef.current.innerHTML
     onUpdate(block.id, { content: html })
 
@@ -167,6 +179,15 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
       return <FileBlock block={block} onUpdate={onUpdate} />
     }
 
+    // Custom YUG blocks
+    if (block.type === 'instagram') {
+      return <InstagramPostBlock block={block} onUpdate={onUpdate} />
+    }
+
+    if (block.type === 'project') {
+      return <ProjectTrackerBlock block={block} onUpdate={onUpdate} />
+    }
+
     // Divider block
     if (block.type === 'divider') {
       return <div className="divider-block" />
@@ -183,6 +204,8 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
           placeholder="Type / for commands"
           className="block-input code"
           rows="3"
+          dir="ltr"
+          style={{ direction: 'ltr' }}
         />
       )
     }
@@ -200,6 +223,14 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
         className={className}
         dangerouslySetInnerHTML={{ __html: block.content || '' }}
         data-placeholder={block.content ? '' : 'Type / for commands'}
+        dir="ltr"
+        lang="en"
+        style={{ 
+          direction: 'ltr', 
+          unicodeBidi: 'bidi-override',
+          writingMode: 'horizontal-tb',
+          textAlign: 'left'
+        }}
       />
     )
   }

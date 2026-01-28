@@ -23,9 +23,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background: var(--bg-primary);
+  direction: ltr !important;
+}
+
+* {
+  direction: ltr !important;
 }
 
 #root {
   width: 100%;
   height: 100vh;
+}
+
+/* Force LTR (left-to-right) text direction */
+.block-input,
+.title-input,
+.icon-input,
+.ig-caption-input,
+.ig-hashtags-input,
+.project-name-input,
+.project-input,
+.project-notes,
+textarea,
+input[type="text"] {
+  direction: ltr !important;
+  text-align: left !important;
 }

@@ -1,0 +1,201 @@
+.ig-automation-panel {
+  margin-top: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(74, 158, 255, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.automation-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.automation-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.automation-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.automation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.automation-btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.automation-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.automation-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.generate-btn {
+  border-color: rgba(74, 158, 255, 0.3);
+  background: linear-gradient(135deg, rgba(74, 158, 255, 0.1) 0%, rgba(138, 43, 226, 0.1) 100%);
+}
+
+.generate-btn:hover:not(:disabled) {
+  border-color: rgba(74, 158, 255, 0.5);
+  box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+}
+
+.hashtag-btn {
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.hashtag-btn:hover:not(:disabled) {
+  border-color: rgba(255, 107, 107, 0.5);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.2);
+}
+
+.schedule-btn {
+  border-color: rgba(255, 165, 0, 0.3);
+}
+
+.schedule-btn:hover:not(:disabled) {
+  border-color: rgba(255, 165, 0, 0.5);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+}
+
+.copy-btn {
+  border-color: rgba(74, 255, 158, 0.3);
+}
+
+.copy-btn:hover:not(:disabled) {
+  border-color: rgba(74, 255, 158, 0.5);
+  box-shadow: 0 0 20px rgba(74, 255, 158, 0.2);
+}
+
+.scheduler-panel {
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scheduler-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.schedule-input {
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.schedule-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.schedule-confirm-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.schedule-confirm-btn:hover:not(:disabled) {
+  background: #3a8eef;
+  transform: scale(1.02);
+}
+
+.schedule-confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.scheduled-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255, 165, 0, 0.1);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 6px;
+  color: #ffa500;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .automation-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .scheduler-inputs {
+    grid-template-columns: 1fr;
+  }
+}

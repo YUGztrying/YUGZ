@@ -46,3 +46,34 @@
   flex-direction: column;
   gap: 2px;
 }
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .editor {
+    padding: 80px 16px 32px 16px;
+  }
+  
+  .page-header {
+    margin-bottom: 24px;
+  }
+  
+  .icon-input {
+    font-size: 36px;
+    width: 48px;
+  }
+  
+  .title-input {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editor {
+    padding: 72px 12px 24px 12px;
+  }
+  
+  .title-input {
+    font-size: 24px;
+  }
+}

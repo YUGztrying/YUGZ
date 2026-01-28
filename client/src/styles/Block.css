@@ -113,6 +113,9 @@
   padding: 3px 2px;
   width: 100%;
   resize: none;
+  direction: ltr !important;
+  unicode-bidi: embed !important;
+  text-align: left !important;
 }
 
 .block-input::placeholder {
@@ -248,4 +251,38 @@
   height: 1px;
   background: var(--border-color);
   margin: 8px 0;
+}
+
+
+/* Mobile Touch-Friendly */
+@media (max-width: 768px) {
+  .block-controls {
+    /* Make touch targets bigger on mobile */
+    min-width: 36px;
+  }
+  
+  .block-menu-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  
+  .block-input {
+    font-size: 16px !important; /* Prevent iOS zoom */
+    padding: 8px;
+  }
+  
+  .type-menu {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .type-menu-item {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+  
+  .type-icon {
+    font-size: 20px;
+  }
 }
