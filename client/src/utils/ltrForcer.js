@@ -11,7 +11,7 @@ export function enforceLTR() {
     element.setAttribute('dir', 'ltr')
     element.style.direction = 'ltr'
     element.style.textAlign = 'left'
-    element.style.unicodeBidi = 'embed' // embed instead of bidi-override
+    element.style.unicodeBidi = 'plaintext' // plaintext prevents character reversal
     
     // Remove any conflicting attributes
     element.removeAttribute('rtl')
