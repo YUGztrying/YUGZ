@@ -36,6 +36,7 @@
   color: var(--text-primary);
   line-height: 1.2;
   direction: ltr;
+  unicode-bidi: bidi-override;
   text-align: left;
 }
 
