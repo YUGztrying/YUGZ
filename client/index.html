@@ -9,31 +9,39 @@
     <meta name="description" content="YUGZ - A powerful block-based editor with rich text formatting" />
     <title>YUGZ - Block Editor</title>
     <style>
-      /* Force LTR globally with unicode-bidi embed to prevent character reversal */
-      *, *::before, *::after {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         direction: ltr !important;
-        unicode-bidi: embed !important;
       }
       
-      html, body {
+      html, body, #root {
+        width: 100%;
+        height: 100%;
         direction: ltr !important;
-        unicode-bidi: embed !important;
       }
       
-      input, textarea, [contenteditable], [contenteditable="true"] {
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      [contenteditable="true"] {
         direction: ltr !important;
         text-align: left !important;
-        unicode-bidi: embed !important;
+        unicode-bidi: plaintext !important;
       }
       
-      /* Override any browser defaults for input direction */
-      input:not([type="radio"]):not([type="checkbox"]) {
-        text-align: left !important;
-        unicode-bidi: embed !important;
+      [contenteditable="true"]:focus {
+        outline: none;
       }
     </style>
   </head>
-  <body>
+  <body dir="ltr">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
