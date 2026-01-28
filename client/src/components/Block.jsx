@@ -80,6 +80,20 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
     }
   }, [])
 
+  const handlePaste = (e) => {
+    // Prevent default paste behavior
+    e.preventDefault()
+    
+    // Get plain text from clipboard
+    const text = e.clipboardData.getData('text/plain')
+    
+    // Remove Unicode bidirectional control characters
+    const cleanText = text.replace(/[\u202A-\u202E\u2066-\u2069]/g, '')
+    
+    // Insert cleaned text
+    document.execCommand('insertText', false, cleanText)
+  }
+
   const handleKeyDown = (e) => {
     // Handle formatting shortcuts
     if ((e.metaKey || e.ctrlKey) && e.key === 'b') {
@@ -140,8 +154,13 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
     contentEditableRef.current.dir = 'ltr'
     contentEditableRef.current.style.direction = 'ltr'
     contentEditableRef.current.style.textAlign = 'left'
+    contentEditableRef.current.style.unicodeBidi = 'plaintext'
 
-    const html = contentEditableRef.current.innerHTML
+    // Get content and remove Unicode bidirectional control characters
+    let html = contentEditableRef.current.innerHTML
+    // Remove Unicode bidi control characters (U+202A to U+202E, U+2066 to U+2069)
+    html = html.replace(/[\u202A-\u202E\u2066-\u2069]/g, '')
+    
     onUpdate(block.id, { content: html })
 
     // Check for "/" command
@@ -227,6 +246,7 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
         suppressContentEditableWarning
         onInput={handleContentEditableChange}
         onKeyDown={handleKeyDown}
+        onPaste={handlePaste}
         className={className}
         dangerouslySetInnerHTML={{ __html: block.content || '' }}
         data-placeholder={block.content ? '' : 'Type / for commands'}
@@ -234,7 +254,8 @@ function Block({ block, onUpdate, onAddBlock, onDelete, onMoveUp, onMoveDown, is
         lang="en"
         style={{ 
           direction: 'ltr', 
-          textAlign: 'left'
+          textAlign: 'left',
+          unicodeBidi: 'plaintext'
         }}
       />
     )
