@@ -35,6 +35,8 @@
   outline: none;
   color: var(--text-primary);
   line-height: 1.2;
+  direction: ltr;
+  text-align: left;
 }
 
 .title-input::placeholder {
